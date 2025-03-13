@@ -9,7 +9,7 @@ const toggleDark = useToggle(isDark);
   <div
     :class="{
       'bg-gradient-to-br from-emerald-950 to-indigo-950 textteal-100': isDark,
-      'bg-white text-indigo-950': !isDark,
+      'bg-teal-100': !isDark,
     }"
     class="h-full justify-center flex items-center flex-col"
   >
@@ -27,13 +27,18 @@ const toggleDark = useToggle(isDark);
     </div>
 
     <p
-      :class="{ 'text-teal-100': isDark, 'text-indigo-950': !isDark }"
+      :class="{ 'text-teal-100': isDark, 'text-indigo-800': !isDark }"
       class="font-mono sm:text-3xl md:text-4xl xl:text-6xl font-bold"
     >
-      Pozdrav, ja sam <span class="text-cyan-400">Vid Ernečić</span>
+      Pozdrav, ja sam
+      <span
+        :class="{ 'text-cyan-400': isDark, 'text-indigo-950': !isDark }"
+        class="text-cyan-400"
+        >Vid Ernečić</span
+      >
     </p>
     <hr
-      :class="{ 'border-white': isDark, 'border-indigo-950': !isDark }"
+      :class="{ 'border-[#bce5fd]': isDark, 'border-indigo-950': !isDark }"
       class="w-[1024px] my-10 opacity-75 rounded-full"
     />
     <h2
