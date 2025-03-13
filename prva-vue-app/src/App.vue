@@ -16,14 +16,19 @@ const toggleDark = useToggle(isDark);
     <div class="mb-5 self-start ml-110">
       <button
         @click="toggleDark()"
-        class="text-black-100 bg-white rounded-2xl w-30 text-base cursor-pointer"
+        :class="{
+          'bg-white text-black': isDark,
+          'bg-indigo-950 text-white': !isDark,
+        }"
+        class="rounded-2xl w-30 text-base cursor-pointer"
       >
         {{ isDark ? "Toggle Light" : "Toggle Dark" }} mode
       </button>
     </div>
+
     <p
       :class="{ 'text-teal-100': isDark, 'text-indigo-950': !isDark }"
-      class="font-mono text-6xl font-bold transition-all duration-300 ease-in-out"
+      class="font-mono sm:text-3xl md:text-4xl xl:text-6xl font-bold"
     >
       Pozdrav, ja sam <span class="text-cyan-400">Vid Ernečić</span>
     </p>
@@ -39,12 +44,12 @@ const toggleDark = useToggle(isDark);
       class="text-2xl self-start ml-110"
     >
       Moji omiljeni filmovi:
-      <div class="mt-2 flex flex-row gap-20">
+      <div class="mt-2 flex flex-col md:flex-row gap-20 ml-20">
         <div class="flex items-center flex-col">
           <img
             src="./assets/images/godfather.jpg"
             alt=""
-            class="w-80 h-[480px] mt-20 rounded-[6px]"
+            class="w-80 h-[480px] mt-20 rounded-[6px] md:w-60 md:h-[300px] sm:w-40 sm:h-[200px]"
           />
           <h4
             :class="{
@@ -60,7 +65,7 @@ const toggleDark = useToggle(isDark);
           <img
             src="./assets/images/prestige.jpg"
             alt=""
-            class="w-80 h-[480px] mt-20 rounded-[6px]"
+            class="w-80 h-[480px] mt-20 rounded-[6px] md:w-60 md:h-[300px] sm:w-40 sm:h-[200px]"
           />
           <h4
             :class="{
@@ -76,7 +81,7 @@ const toggleDark = useToggle(isDark);
           <img
             src="./assets/images/departed.jpg"
             alt=""
-            class="w-80 h-[480px] mt-20 rounded-[6px]"
+            class="w-80 h-[480px] mt-20 rounded-[6px] md:w-60 md:h-[300px] sm:w-40 sm:h-[200px]"
           />
           <h4
             :class="{
