@@ -11,7 +11,7 @@ const toggleDark = useToggle(isDark);
       'bg-gradient-to-br from-emerald-950 to-indigo-950 textteal-100': isDark,
       'bg-teal-100': !isDark,
     }"
-    class="h-full justify-center flex items-center flex-col"
+    class="min-h-screen justify-center flex items-center flex-col"
   >
     <div class="mb-5 self-start ml-110">
       <button
@@ -46,10 +46,12 @@ const toggleDark = useToggle(isDark);
         'text-teal-100/75': isDark,
         'text-indigo-950': !isDark,
       }"
-      class="text-2xl self-start ml-110"
+      class="text-2xl self-start xl:ml-110 md:ml-75 sm:ml-50"
     >
       Moji omiljeni filmovi:
-      <div class="mt-2 flex flex-col md:flex-row gap-20">
+      <div
+        class="mt-2 sm:mt-0.2 flex xl:flex-row sm:flex-col md:flex-row xl:gap-20 sm:gap-5 xl:mr-100 sm:mr-90"
+      >
         <div class="flex items-center flex-col">
           <img
             src="./assets/images/godfather.jpg"
