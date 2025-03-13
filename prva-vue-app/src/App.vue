@@ -44,12 +44,12 @@ const toggleDark = useToggle(isDark);
       class="text-2xl self-start ml-110"
     >
       Moji omiljeni filmovi:
-      <div class="mt-2 flex flex-col md:flex-row gap-20 ml-20">
+      <div class="mt-2 flex flex-col md:flex-row gap-20">
         <div class="flex items-center flex-col">
           <img
             src="./assets/images/godfather.jpg"
             alt=""
-            class="w-80 h-[480px] mt-20 rounded-[6px] md:w-60 md:h-[300px] sm:w-40 sm:h-[200px]"
+            class="xl:w-80 xl:h-[480px] mt-20 rounded-[6px]"
           />
           <h4
             :class="{
@@ -65,7 +65,7 @@ const toggleDark = useToggle(isDark);
           <img
             src="./assets/images/prestige.jpg"
             alt=""
-            class="w-80 h-[480px] mt-20 rounded-[6px] md:w-60 md:h-[300px] sm:w-40 sm:h-[200px]"
+            class="xl:w-80 xl:h-[480px] mt-20 rounded-[6px]"
           />
           <h4
             :class="{
@@ -81,7 +81,7 @@ const toggleDark = useToggle(isDark);
           <img
             src="./assets/images/departed.jpg"
             alt=""
-            class="w-80 h-[480px] mt-20 rounded-[6px] md:w-60 md:h-[300px] sm:w-40 sm:h-[200px]"
+            class="xl:w-80 xl:h-[480px] mt-20 rounded-[6px]"
           />
           <h4
             :class="{
